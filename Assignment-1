@@ -1,0 +1,40 @@
+/*
+
+Print any given inputString in following format.
+
+Output
+
+index:  0    1   2   3   4   
+chars:  H    e   l   l   o
+
+Every character is separated by tab, use "\t" for inserting tab.
+*/
+
+import java.util.Scanner;
+class task5{
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter The String : ");
+    String input = sc.nextLine();
+    int strlen = input.length();
+    System.out.print("index: ");
+    for(int i=0; i<input.length(); i++)
+    {
+      System.out.print(i);
+      if(i != strlen - 1)
+      {
+        System.out.print("\t");
+      }
+      
+    }
+    System.out.println();
+    System.out.print("chars: ");
+    for(int i=0; i<input.length(); i++)
+    {
+      System.out.print(input.charAt(i));
+      if(i != strlen - 1){
+        System.out.print("\t");
+      }
+    }
+  }
+}
